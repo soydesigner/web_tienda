@@ -2,6 +2,7 @@
 
 Sitio web de **Pindeco — Aplicación de pinturas y revestimientos**: lacado y restauración de mobiliario y empapelado de paramentos en Asturias.
 
+<<<<<<< HEAD
 Es una web estática (HTML + CSS + JavaScript, sin framework ni proceso de compilación), pensada para abrirse tal cual o subirse a cualquier hosting estático como Vercel.
 
 ## Estructura
@@ -66,3 +67,8 @@ Cabecera · Portada · Servicios (lacado, restauración, empapelado) · Comparad
 ---
 
 © Pindeco · Aplicación de pinturas y revestimientos
+=======
+Es una web estática (HTML + CSS + JavaScript, sin framework ni proceso de compilación), pensada para subirse a cualquier hosting estático como Vercel.
+
+## Estructura
+>>>>>>> 1f2e0b2a799f01f5f7cec49c11057d1258102e6d
