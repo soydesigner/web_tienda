@@ -217,8 +217,8 @@
   .foot-bottom .dots i{width:10px;height:13px;display:block}
 
   /* ---------- Reveal ---------- */
-  .reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
-  .reveal.in{opacity:1;transform:none}
+  .js .reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+  .js .reveal.in{opacity:1;transform:none}
 
   /* ---------- Mobile ---------- */
   @media(max-width:980px){
@@ -246,5 +246,5 @@
   }
   @media(prefers-reduced-motion:reduce){
     *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
-    .reveal{opacity:1;transform:none}
+    .js .reveal{opacity:1;transform:none}
   }
