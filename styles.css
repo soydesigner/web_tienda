@@ -114,7 +114,17 @@
 
   /* ---------- Antes/Después ---------- */
   .compare{position:relative;width:100%;max-width:920px;margin:0 auto;aspect-ratio:16/9;border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow);user-select:none;border:1px solid var(--line);touch-action:none}
-  .compare .layer{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+  .compare .layer{
+    position:absolute;
+    inset:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
   .layer .plabel{position:absolute;top:16px;font-family:"Fredoka";font-weight:600;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:rgba(13,13,15,.5);padding:6px 14px;border-radius:999px;backdrop-filter:blur(4px)}
   .layer-before{background:linear-gradient(135deg,#5a5048,#3a342e)}
   .layer-before .plabel{left:16px}
