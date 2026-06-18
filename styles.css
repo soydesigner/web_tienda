@@ -116,7 +116,7 @@
   .compare{position:relative;width:100%;max-width:920px;margin:0 auto;aspect-ratio:16/9;border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow);user-select:none;border:1px solid var(--line);touch-action:none}
   .compare .layer{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
   .layer .plabel{position:absolute;top:16px;font-family:"Fredoka";font-weight:600;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:rgba(13,13,15,.5);padding:6px 14px;border-radius:999px;backdrop-filter:blur(4px)}
-  .layer-before{background:linear-gradient(135deg,#5a5048,#3a342e);filter:saturate(.4)}
+  .layer-before{background:linear-gradient(135deg,#5a5048,#3a342e)}
   .layer-before .plabel{left:16px}
   .layer-after{background:linear-gradient(135deg,#ffd54a,#e8541f 70%,#f4332a);clip-path:inset(0 0 0 50%)}
   .layer-after .plabel{right:16px;background:rgba(255,255,255,.22)}
@@ -125,6 +125,22 @@
   .compare .knob{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:48px;height:48px;border-radius:50%;background:#fff;z-index:5;display:flex;align-items:center;justify-content:center;cursor:ew-resize;box-shadow:0 6px 18px -6px rgba(13,13,15,.5)}
   .compare .knob svg{width:24px;height:24px}
   .compare-hint{text-align:center;color:var(--muted);font-size:.92rem;margin-top:16px}
+
+  /* ---------- Carrusel antes/después ---------- */
+  .carousel{position:relative;max-width:920px;margin:0 auto}
+  .carousel-viewport{overflow:hidden;border-radius:var(--r-lg)}
+  .carousel-track{display:flex;transition:transform .45s ease}
+  .car-slide{flex:0 0 100%;min-width:0}
+  .car-slide .compare{max-width:100%;margin:0}
+  .car-caption{text-align:center;font-family:"Fredoka";font-weight:500;color:var(--ink);margin-top:16px;font-size:1.02rem;min-height:1.4em}
+  .car-nav{position:absolute;top:calc(50% - 22px);transform:translateY(-50%);z-index:6;width:46px;height:46px;border-radius:50%;border:none;background:rgba(251,250,247,.92);color:var(--ink);font-size:1.7rem;line-height:1;cursor:pointer;display:none;align-items:center;justify-content:center;box-shadow:var(--shadow);transition:transform .15s ease,background .15s ease}
+  .car-nav:hover{transform:translateY(-50%) scale(1.08);background:#fff}
+  .car-nav.prev{left:-12px}
+  .car-nav.next{right:-12px}
+  .car-dots{display:none;justify-content:center;gap:9px;margin-top:18px}
+  .car-dot{width:10px;height:10px;border-radius:50%;background:var(--line);border:none;cursor:pointer;padding:0;transition:background .15s ease,transform .15s ease}
+  .car-dot:hover{transform:scale(1.25)}
+  .car-dot.active{background:var(--ink)}
   .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
   .gallery .g{aspect-ratio:4/3;border-radius:var(--r-md);border:1px solid var(--line);background:var(--paper);overflow:hidden;display:flex;align-items:flex-end;padding:14px;color:#fff;font-family:"Fredoka";font-weight:500;font-size:.92rem;box-shadow:var(--shadow)}
   .g1{background:linear-gradient(150deg,#2a2622,#4a423a)} .g2{background:linear-gradient(150deg,#6db74f,#3d8f2c)} .g3{background:linear-gradient(150deg,#c9d4ff,#8aa0e8)}
@@ -243,6 +259,8 @@
     .nav{height:84px}
     .brand img{height:60px}
     html{scroll-padding-top:96px}
+    .car-nav.prev{left:6px}
+    .car-nav.next{right:6px}
   }
   @media(prefers-reduced-motion:reduce){
     *{animation:none!important;transition:none!important;scroll-behavior:auto!important}

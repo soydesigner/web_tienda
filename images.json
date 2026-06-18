@@ -1,13 +1,16 @@
 {
-  "compare-before": { "src": "img/antes.jpg",      "alt": "Mueble antes de restaurar" },
-  "compare-after":  { "src": "img/despues.jpg",     "alt": "Mueble lacado, resultado final" },
+  "comparisons": [
+    { "title": "Cómoda restaurada · roble",   "before": "img/antes.jpg",   "after": "img/despues.jpg" },
+    { "title": "Frente de cocina lacado",      "before": "img/antes-2.jpg", "after": "img/despues-2.jpg" },
+    { "title": "Salón empapelado · botánico",  "before": "img/antes-3.jpg", "after": "img/despues-3.jpg" }
+  ],
 
-  "gallery-1":      { "src": "img/galeria-1.jpg",   "alt": "Cómoda restaurada en roble" },
-  "gallery-2":      { "src": "img/galeria-2.jpg",   "alt": "Salón con papel pintado botánico" },
-  "gallery-3":      { "src": "img/galeria-3.jpg",   "alt": "Frente de cocina lacado" },
+  "gallery-1": { "src": "img/galeria-1.jpg", "alt": "Cómoda restaurada en roble" },
+  "gallery-2": { "src": "img/galeria-2.jpg", "alt": "Salón con papel pintado botánico" },
+  "gallery-3": { "src": "img/galeria-3.jpg", "alt": "Frente de cocina lacado" },
 
-  "taller":         { "src": "img/taller.jpg",      "alt": "Taller de Pindeco" },
+  "taller":    { "src": "img/taller.jpg",    "alt": "Taller de Pindeco" },
 
-  "hero-1":         { "src": "img/portada-1.jpg",   "alt": "Mueble lacado acabado satinado" },
-  "hero-2":         { "src": "img/portada-2.jpg",   "alt": "Mueble antes de la restauración" }
+  "hero-1":    { "src": "img/portada-1.jpg", "alt": "Mueble lacado acabado satinado" },
+  "hero-2":    { "src": "img/portada-2.jpg", "alt": "Mueble antes de la restauración" }
 }

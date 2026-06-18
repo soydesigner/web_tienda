@@ -75,11 +75,23 @@ Cada zona tiene una etiqueta:
 
 | Etiqueta          | Dónde aparece                         |
 |-------------------|----------------------------------------|
-| `compare-before`  | Comparador · foto "antes"              |
-| `compare-after`   | Comparador · foto "después"            |
+| `comparisons`     | Carrusel antes/después (lista de trabajos) |
 | `gallery-1/2/3`   | Galería de trabajos (tres fotos)       |
 | `taller`          | Foto del taller                        |
 | `hero-1` / `hero-2` | Imágenes de la portada               |
+
+### Carrusel antes/después
+
+Es una **lista** dentro de `images.json`. Cada elemento es un trabajo con su foto "antes", su "después" y un título:
+
+```json
+"comparisons": [
+  { "title": "Cómoda restaurada", "before": "img/antes.jpg", "after": "img/despues.jpg" },
+  { "title": "Cocina lacada",     "before": "img/antes-2.jpg", "after": "img/despues-2.jpg" }
+]
+```
+
+Para **añadir** un trabajo, copia un bloque `{ ... }`, súbelo a `img/` y apunta a sus archivos. Para **quitarlo**, borra su bloque. Las flechas y los puntos del carrusel se ajustan solos al número de trabajos.
 
 Para cambiar una foto tienes dos formas:
 

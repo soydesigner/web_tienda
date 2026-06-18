@@ -131,15 +131,26 @@
       <p style="margin-left:auto;margin-right:auto">Desliza el tirador para comparar el estado de partida con el acabado final.</p>
     </div>
 
-    <div class="compare reveal" id="compare" role="slider" aria-label="Comparador antes y después" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0">
-      <div class="layer layer-before" data-img="compare-before"><span class="plabel">Antes</span><span class="big-txt">Pieza desgastada</span></div>
-      <div class="layer layer-after" id="afterLayer" data-img="compare-after"><span class="plabel">Después</span><span class="big-txt">Lacada como nueva</span></div>
-      <div class="divider" id="divider"></div>
-      <div class="knob" id="knob" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#0D0D0F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6 4 12l5 6M15 6l5 6-5 6"/></svg>
+    <div class="carousel reveal" id="cmpCarousel">
+      <button class="car-nav prev" id="cmpPrev" type="button" aria-label="Trabajo anterior">&#8249;</button>
+      <div class="carousel-viewport">
+        <div class="carousel-track" id="cmpTrack">
+          <!-- Respaldo si no carga el JS o el images.json; el carrusel se construye desde images.json -->
+          <div class="car-slide">
+            <div class="compare" role="slider" aria-label="Comparador antes y después" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0">
+              <div class="layer layer-before" style="background-image:url('img/antes.jpg')"><span class="plabel">Antes</span></div>
+              <div class="layer layer-after" style="background-image:url('img/despues.jpg')"><span class="plabel">Después</span></div>
+              <div class="divider"></div>
+              <div class="knob" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#0D0D0F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6 4 12l5 6M15 6l5 6-5 6"/></svg></div>
+            </div>
+            <p class="car-caption">Cómoda restaurada · roble</p>
+          </div>
+        </div>
       </div>
+      <button class="car-nav next" id="cmpNext" type="button" aria-label="Siguiente trabajo">&#8250;</button>
+      <div class="car-dots" id="cmpDots"></div>
     </div>
-    <p class="compare-hint">↔ Usa el ratón, el dedo o las flechas del teclado · <em>sustituye estos paneles por tus fotos reales</em></p>
+    <p class="compare-hint">↔ Arrastra el tirador para comparar · usa <strong>‹ ›</strong> o los puntos para cambiar de trabajo</p>
 
     <div class="gallery">
       <div class="g g1 reveal" data-img="gallery-1">Cómoda restaurada · roble</div>
