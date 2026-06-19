@@ -278,7 +278,18 @@
       </ul>
     </div>
 
-    <form id="presupuesto" class="reveal" novalidate>
+    <!-- IMPORTANTE: cambia TU-CORREO@ejemplo.com por tu email real.
+         La primera vez que se envíe, FormSubmit te mandará un correo para activarlo (un solo clic). -->
+    <form id="presupuesto" class="reveal" action="https://formsubmit.co/TU-CORREO@ejemplo.com" method="POST" enctype="multipart/form-data" novalidate>
+      <!-- Ajustes de FormSubmit -->
+      <input type="hidden" name="_subject" value="Nueva solicitud de presupuesto · Pindeco">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_autoresponse" value="¡Hola! Hemos recibido tu solicitud en Pindeco. Te responderemos con tu presupuesto en un plazo de 24-48 h. Gracias por confiar en nosotros.">
+      <!-- Cambia TU-DOMINIO por tu dirección real de Vercel cuando la tengas, p. ej. https://web-tienda.vercel.app/gracias.html -->
+      <input type="hidden" name="_next" value="https://TU-DOMINIO/gracias.html">
+      <!-- Trampa antispam (no la rellenan los humanos) -->
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+
       <div class="two">
         <div class="field">
           <label for="nombre">Nombre</label>
@@ -313,8 +324,8 @@
         <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-label="Subir archivos: pulsa o arrastra aquí tus fotos">
           <svg class="dzico" viewBox="0 0 100 130"><path d="M50 5C30 55 12 75 12 92a38 38 0 0 0 76 0C88 75 70 55 50 5Z" fill="var(--verde)"/><path d="M50 60v26M40 70l10-10 10 10" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
           <strong>Arrastra tus fotos aquí o <span class="u">selecciónalas</span></strong>
-          <small>JPG, PNG o PDF · hasta 10 MB por archivo · máx. 8 archivos</small>
-          <input id="fileInput" type="file" name="archivos" accept="image/*,.pdf" multiple hidden>
+          <small>JPG, PNG o PDF · hasta 10 MB sumando todas las fotos</small>
+          <input id="fileInput" type="file" name="attachment" accept="image/*,.pdf" multiple hidden>
         </div>
         <ul class="files" id="fileList"></ul>
       </div>

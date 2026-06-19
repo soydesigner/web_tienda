@@ -4,6 +4,25 @@
 (function () {
   "use strict";
 
+  var reduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* Rota una zona entre varias imágenes con fundido */
+  function rotateSlot(el, srcs, interval) {
+    if (reduced || !el || !srcs || srcs.length < 2) return;
+    var i = 0;
+    el.style.transition = "opacity .55s ease";
+    setInterval(function () {
+      i = (i + 1) % srcs.length;
+      el.style.opacity = "0";
+      setTimeout(function () {
+        el.style.backgroundImage = 'url("' + srcs[i] + '")';
+        el.style.backgroundSize = "cover";
+        el.style.backgroundPosition = "center";
+        el.style.opacity = "1";
+      }, 550);
+    }, interval);
+  }
+
   /* ---- Imágenes simples (galería, taller, portada) ---- */
   function applyImage(key, item) {
     if (!item || !item.src) return;
@@ -123,6 +142,22 @@
     if (next) next.style.display = n > 1 ? "flex" : "none";
     if (dots) dots.style.display = show;
     go(0);
+
+    /* ---- Autoplay (se pausa al interactuar) ---- */
+    var carousel = document.getElementById("cmpCarousel");
+    if (carousel && n > 1 && !reduced) {
+      var timer = null, resume = null;
+      function play() { if (!timer) timer = setInterval(function () { go(idx + 1); }, 5500); }
+      function stop() { if (timer) { clearInterval(timer); timer = null; } }
+      function later() { clearTimeout(resume); resume = setTimeout(play, 6000); }
+      carousel.addEventListener("pointerenter", stop);
+      carousel.addEventListener("pointerleave", play);
+      carousel.addEventListener("focusin", stop);
+      carousel.addEventListener("focusout", play);
+      carousel.addEventListener("pointerdown", stop);
+      carousel.addEventListener("pointerup", later);
+      play();
+    }
   }
 
   /* ---- Carga de datos ---- */
@@ -131,9 +166,21 @@
     .then(function (data) {
       if (data.comparisons) buildCarousel(data.comparisons);
       Object.keys(data).forEach(function (key) {
-        if (key === "comparisons") return;
+        if (key === "comparisons" || key === "heroSlides" || key === "galleryRotation") return;
         applyImage(key, data[key]);
       });
+      /* Portada: la foto grande va cambiando con fundido */
+      if (data.heroSlides && data.heroSlides.length) {
+        rotateSlot(document.querySelector('[data-img="hero-1"]'), data.heroSlides, 4500);
+      }
+      /* Galería: cada cuadro rota entre varias fotos (escalonado) */
+      if (data.galleryRotation) {
+        var gi = 0;
+        Object.keys(data.galleryRotation).forEach(function (key) {
+          rotateSlot(document.querySelector('[data-img="' + key + '"]'), data.galleryRotation[key], 5200 + gi * 1300);
+          gi++;
+        });
+      }
     })
     .catch(function () {
       /* Sin images.json o en local (file://): se mantiene el respaldo del HTML y los degradados. */

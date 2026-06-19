@@ -101,3 +101,24 @@ Para cambiar una foto tienes dos formas:
 Recomendaciones: usa `.jpg` para fotos (pesan menos), con el lado largo sobre 1200–1600 px, y nombres en minúscula y sin espacios ni tildes.
 
 > Si una imagen no existe o se abre el sitio en local sin servidor, esa zona muestra un degradado de muestra en lugar de la foto.
+
+## Configurar el envío del formulario (FormSubmit)
+
+El formulario de contacto envía las solicitudes (con fotos adjuntas) por correo usando **FormSubmit**, un servicio gratuito que no necesita servidor. Pasos para activarlo:
+
+1. En `index.html`, busca la línea del formulario y cambia el correo:
+   `action="https://formsubmit.co/TU-CORREO@ejemplo.com"` → pon tu email real.
+2. Sube el cambio (commit + push). La **primera vez** que alguien envíe el formulario, FormSubmit te mandará un correo de confirmación: ábrelo y pulsa el enlace para **activar** el formulario (solo se hace una vez).
+3. Cuando sepas la dirección final de tu web en Vercel, cambia también el `_next` por tu página de gracias, p. ej.:
+   `value="https://web-tienda.vercel.app/gracias.html"`
+   (Si lo dejas sin cambiar, FormSubmit mostrará su propia página de agradecimiento.)
+
+**Qué hace ya:**
+- Te llega un correo con los datos y las **fotos adjuntas**.
+- El cliente recibe una **autorrespuesta** automática (texto editable en el campo `_autoresponse`).
+- Tras enviar, el cliente ve la página `gracias.html`.
+
+**Límites y notas:**
+- FormSubmit admite hasta **10 MB sumando todas las fotos**. El formulario ya avisa si se supera.
+- Para que funcione la autorrespuesta, el envío usa el método estándar (no AJAX); por eso el cliente pasa por una breve verificación antispam de FormSubmit antes de llegar a la página de gracias.
+- Cuando quieras algo más profesional (correo desde tu propio dominio, sin límite de 10 MB, plantillas a medida), se puede migrar a una función serverless en Vercel + Resend.
