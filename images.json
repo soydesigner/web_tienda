@@ -11,11 +11,6 @@
 
   "taller":    { "src": "img/taller.jpg",    "alt": "Taller de Pindeco" },
 
-  "hero-1":    { "src": "img/portada-1.jpg", "alt": "Mueble lacado acabado satinado" },
-  "hero-2":    { "src": "img/portada-2.jpg", "alt": "Mueble antes de la restauración" },
-
-  "heroSlides": ["img/portada-1.jpg", "img/despues.jpg", "img/galeria-2.jpg", "img/despues-2.jpg"],
-
   "galleryRotation": {
     "gallery-1": ["img/galeria-1.jpg", "img/despues.jpg"],
     "gallery-2": ["img/galeria-2.jpg", "img/despues-3.jpg"],

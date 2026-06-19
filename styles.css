@@ -1,15 +1,15 @@
 :root{
-    --ink:#0D0D0F;
-    --text:#221F1C;
-    --muted:#6E675E;
-    --canvas:#F5F3EE;
-    --paper:#FBFAF7;
-    --line:#E4DED3;
-    --amarillo:#FFCB19;
-    --rojo:#F4332A;
-    --verde:#52C03B;
-    --azul:#B7C7FB;
-    --shadow:0 18px 40px -22px rgba(20,16,12,.45);
+    --ink:#16284D;
+    --text:#1E2740;
+    --muted:#6B7187;
+    --canvas:#F4F2EC;
+    --paper:#FBFAF8;
+    --line:#E2DCD0;
+    --amarillo:#E6B43A;
+    --rojo:#2C4E86;
+    --verde:#C2701F;
+    --azul:#9FB4DD;
+    --shadow:0 18px 40px -22px rgba(14,22,46,.5);
     --r-lg:26px;
     --r-md:18px;
     --r-sm:12px;
@@ -41,6 +41,7 @@
 
   /* ---------- Header ---------- */
   header{position:sticky;top:0;z-index:60;background:rgba(245,243,238,.82);backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:border-color .2s ease,background .2s ease}
+  header::before{content:"";display:block;height:4px;background:linear-gradient(90deg,var(--amarillo) 0%,var(--amarillo) 33%,var(--rojo) 33%,var(--rojo) 66%,var(--verde) 66%,var(--verde) 100%)}
   header.scrolled{border-color:var(--line)}
   .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;height:112px}
   .brand img{height:88px;width:auto}
@@ -71,7 +72,13 @@
   .hero-note b{color:var(--text);font-weight:600}
 
   /* Composición visual del hero (placeholder de fotos) */
-  .hero-art{position:relative;height:440px}
+  .hero-art{position:relative;display:flex;align-items:center;justify-content:center;padding:14px 4px}
+  .hero-blob{position:absolute;inset:5% 1%;z-index:0;background:var(--amarillo);border-radius:46% 54% 56% 44% / 57% 46% 54% 43%}
+  .hero-truck{position:relative;z-index:2;width:100%;height:auto;display:block;filter:drop-shadow(0 16px 20px rgba(14,22,46,.25))}
+  .hero-art .fdrop{position:absolute;z-index:3;height:auto}
+  .hero-art .hd1{top:4%;left:5%;width:30px}
+  .hero-art .hd2{top:9%;right:6%;width:26px}
+  .hero-art .hd3{bottom:12%;left:2%;width:24px}
   .frame{position:absolute;border-radius:var(--r-lg);overflow:hidden;background:var(--paper);border:1px solid var(--line);box-shadow:var(--shadow)}
   .frame .ph{width:100%;height:100%;display:flex;align-items:flex-end;padding:16px;color:#fff;font-family:"Fredoka";font-weight:500;font-size:.9rem}
   .frame.big{top:0;right:0;width:74%;height:300px;transform:rotate(2deg)}
@@ -91,6 +98,10 @@
   .trust-row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;padding:26px 0}
   .trust-item{display:flex;align-items:center;gap:12px;flex:1;min-width:200px}
   .trust-item .n{font-family:"Fredoka";font-weight:600;font-size:1.7rem;color:var(--ink);line-height:1}
+  .trust-item:nth-child(1) .n{color:#B8860B}
+  .trust-item:nth-child(2) .n{color:var(--rojo)}
+  .trust-item:nth-child(3) .n{color:var(--verde)}
+  .trust-item:nth-child(4) .n{color:var(--ink)}
   .trust-item small{display:block;color:var(--muted);font-size:.9rem}
 
   /* ---------- Sección genérica ---------- */
@@ -118,7 +129,7 @@
   .layer .plabel{position:absolute;top:16px;font-family:"Fredoka";font-weight:600;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:rgba(13,13,15,.5);padding:6px 14px;border-radius:999px;backdrop-filter:blur(4px)}
   .layer-before{background:linear-gradient(135deg,#5a5048,#3a342e)}
   .layer-before .plabel{left:16px}
-  .layer-after{background:linear-gradient(135deg,#ffd54a,#e8541f 70%,#f4332a);clip-path:inset(0 0 0 50%)}
+  .layer-after{background:linear-gradient(135deg,var(--amarillo),var(--verde));clip-path:inset(0 0 0 50%)}
   .layer-after .plabel{right:16px;background:rgba(255,255,255,.22)}
   .layer .big-txt{font-family:"Fredoka";font-weight:600;font-size:clamp(1.4rem,4vw,2.4rem);color:rgba(255,255,255,.85);text-align:center;padding:0 30px}
   .compare .divider{position:absolute;top:0;bottom:0;left:50%;width:3px;background:#fff;transform:translateX(-50%);z-index:4;box-shadow:0 0 0 1px rgba(13,13,15,.15)}
@@ -236,12 +247,16 @@
   .js .reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
 
   /* ---------- Movimiento ---------- */
-  @keyframes kenburns{0%{transform:scale(1)}100%{transform:scale(1.07)}}
   @keyframes floaty{0%{transform:translateY(0)}50%{transform:translateY(-9px)}100%{transform:translateY(0)}}
-  .js .frame.big .ph{animation:kenburns 16s ease-in-out infinite alternate;transform-origin:center}
-  .js .swatch{animation:floaty 6s ease-in-out infinite}
-  .js .swatch.s2{animation-duration:7.5s}
-  .js .drip{animation:floaty 5s ease-in-out infinite}
+  @keyframes bob{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-9px) rotate(-.6deg)}}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  @keyframes blobpulse{0%,100%{transform:scale(1) rotate(0deg)}50%{transform:scale(1.04) rotate(2.5deg)}}
+  .js .hero-blob{transform-box:fill-box;transform-origin:center;animation:blobpulse 13s ease-in-out infinite}
+  .js .hero-truck{animation:bob 5s ease-in-out infinite}
+  .js .hero-art .fdrop{transform-box:fill-box;transform-origin:center}
+  .js .hero-art .hd1{animation:floaty 5s ease-in-out infinite}
+  .js .hero-art .hd2{animation:floaty 6.4s ease-in-out infinite}
+  .js .hero-art .hd3{animation:floaty 5.6s ease-in-out infinite .6s}
   .gallery .g{transition:transform .4s ease,box-shadow .4s ease,opacity .55s ease}
   .gallery .g:hover{transform:translateY(-5px) scale(1.015)}
   .js .reveal.in{opacity:1;transform:none}
@@ -249,7 +264,7 @@
   /* ---------- Mobile ---------- */
   @media(max-width:980px){
     .hero-grid{grid-template-columns:1fr;gap:40px}
-    .hero-art{height:360px;max-width:520px}
+    .hero-art{max-width:520px;margin:0 auto}
     .taller-grid{grid-template-columns:1fr;gap:36px}
     .cont-grid{grid-template-columns:1fr;gap:40px}
     .steps{grid-template-columns:repeat(2,1fr);gap:30px 22px}
