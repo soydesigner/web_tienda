@@ -42,9 +42,9 @@
 <section class="hero">
   <div class="wrap hero-grid">
     <div class="hero-copy reveal">
-      <span class="eyebrow"><svg class="dot" viewBox="0 0 100 130"><path d="M50 5C30 55 12 75 12 92a38 38 0 0 0 76 0C88 75 70 55 50 5Z" fill="var(--rojo)"/></svg> Taller artesanal en Asturias</span>
-      <h1>Damos nueva vida a tus <span class="stroke">muebles</span> y paredes.</h1>
-      <p class="lead">Lacado y restauración de mobiliario y empapelado de paramentos, con acabados que duran.</p>
+      <span class="eyebrow"><svg class="dot" viewBox="0 0 100 130"><path d="M50 5C30 55 12 75 12 92a38 38 0 0 0 76 0C88 75 70 55 50 5Z" fill="var(--rojo)"/></svg> Lacado · Restauración · Empapelado · Asturias</span>
+      <h1>Ponemos <span class="stroke">color</span> a tu hogar.</h1>
+      <p class="lead">Lacamos y restauramos tus muebles y vestimos tus paredes con papel pintado. Acabado profesional de cabina.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#contacto">Pide presupuesto</a>
         <a class="btn btn-ghost" href="#trabajos">Ver trabajos</a>
@@ -53,11 +53,67 @@
     </div>
 
     <div class="hero-art reveal" aria-hidden="true">
-      <div class="drip" style="left:18%"><svg width="34" height="120" viewBox="0 0 34 120"><path d="M17 0v74" stroke="var(--amarillo)" stroke-width="6" stroke-linecap="round"/><circle cx="17" cy="92" r="16" fill="var(--amarillo)"/></svg></div>
-      <div class="frame big"><div class="ph ph-b" data-img="hero-1">Mueble lacado · acabado satinado</div></div>
-      <div class="frame small"><div class="ph ph-a" data-img="hero-2">Antes de la restauración</div></div>
-      <span class="swatch s1"></span>
-      <span class="swatch s2"></span>
+      <svg class="hero-illustration" viewBox="0 0 600 430" role="img" aria-label="Furgoneta de Pindeco" xmlns="http://www.w3.org/2000/svg">
+        <!-- Mancha de color de fondo -->
+        <path class="blob" d="M300 50 C 440 40 545 120 540 225 C 536 330 430 385 300 384 C 175 383 64 332 66 220 C 68 120 165 60 300 50 Z" fill="var(--amarillo)"/>
+
+        <!-- Gotas flotando -->
+        <g class="fdrop d1" transform="translate(96,100) scale(.26)"><path d="M50 5C30 55 12 75 12 92a38 38 0 0 0 76 0C88 75 70 55 50 5Z" fill="var(--amarillo)"/></g>
+        <g class="fdrop d2" transform="translate(486,74) scale(.34)"><path d="M50 5C30 55 12 75 12 92a38 38 0 0 0 76 0C88 75 70 55 50 5Z" fill="var(--verde)"/></g>
+        <g class="fdrop d3" transform="translate(96,300) scale(.28)"><path d="M50 5C30 55 12 75 12 92a38 38 0 0 0 76 0C88 75 70 55 50 5Z" fill="var(--rojo)"/></g>
+
+        <!-- Sombra -->
+        <ellipse cx="300" cy="372" rx="196" ry="15" fill="#000" opacity=".12"/>
+
+        <g class="van">
+          <!-- Baca / escalera -->
+          <g stroke="#8a5a2b" stroke-width="4" stroke-linecap="round">
+            <line x1="158" y1="188" x2="352" y2="188"/>
+            <line x1="158" y1="198" x2="352" y2="198"/>
+          </g>
+          <g stroke="#8a5a2b" stroke-width="3">
+            <line x1="184" y1="187" x2="184" y2="199"/>
+            <line x1="212" y1="187" x2="212" y2="199"/>
+            <line x1="240" y1="187" x2="240" y2="199"/>
+            <line x1="268" y1="187" x2="268" y2="199"/>
+            <line x1="296" y1="187" x2="296" y2="199"/>
+            <line x1="324" y1="187" x2="324" y2="199"/>
+          </g>
+
+          <!-- Carrocería -->
+          <rect x="150" y="202" width="212" height="128" rx="18" fill="#2e7d27"/>
+          <path d="M362 224 H408 C417 224 425 227 431 233 L466 261 C470 264 472 269 472 275 V326 C472 330 469 333 465 333 H362 Z" fill="#2e7d27"/>
+          <!-- Parabrisas -->
+          <path d="M414 242 H452 C457 242 461 245 464 250 L470 261 H414 Z" fill="#dbeafe"/>
+          <!-- Faro y parachoques -->
+          <circle cx="474" cy="286" r="6" fill="var(--amarillo)"/>
+          <rect x="470" y="300" width="12" height="26" rx="4" fill="#c9c9c9"/>
+          <rect x="144" y="300" width="10" height="26" rx="4" fill="#c9c9c9"/>
+
+          <!-- Panel lateral con la marca -->
+          <rect x="168" y="222" width="176" height="92" rx="12" fill="#3f9e34"/>
+          <g>
+            <g transform="translate(220,226) scale(.13)"><path d="M50 5C30 55 12 75 12 92a38 38 0 0 0 76 0C88 75 70 55 50 5Z" fill="var(--amarillo)"/></g>
+            <g transform="translate(246,226) scale(.13)"><path d="M50 5C30 55 12 75 12 92a38 38 0 0 0 76 0C88 75 70 55 50 5Z" fill="var(--rojo)"/></g>
+            <g transform="translate(272,226) scale(.13)"><path d="M50 5C30 55 12 75 12 92a38 38 0 0 0 76 0C88 75 70 55 50 5Z" fill="var(--verde)"/></g>
+          </g>
+          <text x="256" y="298" text-anchor="middle" font-family="Fredoka, sans-serif" font-weight="700" font-size="40" fill="#fff">Pindeco</text>
+
+          <!-- Ruedas -->
+          <g class="wheel">
+            <circle cx="212" cy="348" r="31" fill="#1b1b1b"/>
+            <circle cx="212" cy="348" r="15" fill="#dcdcdc"/>
+            <g stroke="#b9b9b9" stroke-width="3"><line x1="212" y1="335" x2="212" y2="361"/><line x1="199" y1="348" x2="225" y2="348"/><line x1="203" y1="339" x2="221" y2="357"/><line x1="221" y1="339" x2="203" y2="357"/></g>
+            <circle cx="212" cy="348" r="5" fill="#8a8a8a"/>
+          </g>
+          <g class="wheel">
+            <circle cx="430" cy="348" r="31" fill="#1b1b1b"/>
+            <circle cx="430" cy="348" r="15" fill="#dcdcdc"/>
+            <g stroke="#b9b9b9" stroke-width="3"><line x1="430" y1="335" x2="430" y2="361"/><line x1="417" y1="348" x2="443" y2="348"/><line x1="421" y1="339" x2="439" y2="357"/><line x1="439" y1="339" x2="421" y2="357"/></g>
+            <circle cx="430" cy="348" r="5" fill="#8a8a8a"/>
+          </g>
+        </g>
+      </svg>
     </div>
   </div>
 </section>

@@ -78,7 +78,8 @@ Cada zona tiene una etiqueta:
 | `comparisons`     | Carrusel antes/después (lista de trabajos) |
 | `gallery-1/2/3`   | Galería de trabajos (tres fotos)       |
 | `taller`          | Foto del taller                        |
-| `hero-1` / `hero-2` | Imágenes de la portada               |
+
+> La portada (cabecera) ya no usa fotos: es una **ilustración vectorial (SVG)** de la furgoneta de Pindeco, animada, dentro de `index.html`. Para cambiar el texto del lateral de la furgoneta, edita el `<text>…Pindeco…</text>` del SVG en `index.html`.
 
 ### Carrusel antes/después
 
