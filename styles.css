@@ -72,14 +72,14 @@
   .hero-note b{color:var(--text);font-weight:600}
 
   /* Composición visual del hero (placeholder de fotos) */
-  .hero-art{position:relative;display:flex;align-items:center;justify-content:center;padding:6px 0}
-  .road-scene{position:relative;width:100%}
-  .hero-road{width:100%;height:auto;display:block}
-  .hero-truck{position:absolute;left:36%;bottom:8%;width:44%;height:auto;z-index:3;filter:drop-shadow(0 10px 14px rgba(14,22,46,.18))}
-  .truck-shadow{position:absolute;left:37%;bottom:6%;width:42%;height:7%;z-index:2;background:radial-gradient(ellipse at center,rgba(12,16,30,.34),rgba(12,16,30,0) 70%)}
-  .hero-art .fdrop{position:absolute;z-index:4;height:auto}
-  .hero-art .hd1{top:6%;left:3%;width:30px}
-  .hero-art .hd2{top:30%;right:2%;width:26px}
+  .hero-art{position:relative;display:flex;align-items:center;justify-content:center;padding:14px 4px}
+  .hero-blob{position:absolute;inset:5% 1%;z-index:0;background:var(--amarillo);border-radius:46% 54% 56% 44% / 57% 46% 54% 43%}
+  .hero-truck{position:relative;z-index:2;width:100%;height:auto;display:block;filter:drop-shadow(0 16px 20px rgba(14,22,46,.25))}
+  .hero-road{position:relative;z-index:2;width:100%;height:auto;display:block}
+  .hero-art .fdrop{position:absolute;z-index:3;height:auto}
+  .hero-art .hd1{top:4%;left:5%;width:30px}
+  .hero-art .hd2{top:9%;right:6%;width:26px}
+  .hero-art .hd3{bottom:12%;left:2%;width:24px}
   .frame{position:absolute;border-radius:var(--r-lg);overflow:hidden;background:var(--paper);border:1px solid var(--line);box-shadow:var(--shadow)}
   .frame .ph{width:100%;height:100%;display:flex;align-items:flex-end;padding:16px;color:#fff;font-family:"Fredoka";font-weight:500;font-size:.9rem}
   .frame.big{top:0;right:0;width:74%;height:300px;transform:rotate(2deg)}
@@ -252,10 +252,12 @@
   @keyframes bob{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-9px) rotate(-.6deg)}}
   @keyframes spin{to{transform:rotate(360deg)}}
   @keyframes blobpulse{0%,100%{transform:scale(1) rotate(0deg)}50%{transform:scale(1.04) rotate(2.5deg)}}
+  .js .hero-blob{transform-box:fill-box;transform-origin:center;animation:blobpulse 13s ease-in-out infinite}
   .js .hero-truck{animation:bob 5s ease-in-out infinite}
   .js .hero-art .fdrop{transform-box:fill-box;transform-origin:center}
   .js .hero-art .hd1{animation:floaty 5s ease-in-out infinite}
   .js .hero-art .hd2{animation:floaty 6.4s ease-in-out infinite}
+  .js .hero-art .hd3{animation:floaty 5.6s ease-in-out infinite .6s}
   .gallery .g{transition:transform .4s ease,box-shadow .4s ease,opacity .55s ease}
   .gallery .g:hover{transform:translateY(-5px) scale(1.015)}
   .js .reveal.in{opacity:1;transform:none}
