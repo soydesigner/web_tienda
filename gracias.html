@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<script>document.documentElement.classList.add('js');</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>¡Gracias! · Pindeco</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .thanks-wrap{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 24px;gap:6px}
+  .thanks-wrap .logo{height:84px;width:auto;margin-bottom:28px}
+  .thanks-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow);padding:44px 38px;max-width:560px}
+  .thanks-drops{display:flex;gap:10px;justify-content:center;margin-bottom:20px}
+  .thanks-drops svg{width:26px;height:33px}
+  .thanks-card h1{font-size:clamp(2rem,5vw,2.8rem);margin-bottom:14px}
+  .thanks-card p{color:var(--muted);font-size:1.08rem;margin-bottom:10px}
+  .thanks-card .small{font-size:.95rem}
+  .thanks-card .btn{margin-top:24px}
+</style>
+</head>
+<body>
+  <main class="thanks-wrap">
+    <img class="logo" src="pindeco-dark.png" alt="Pindeco">
+    <div class="thanks-card">
+      <div class="thanks-drops" aria-hidden="true">
+        <svg viewBox="0 0 100 130"><path d="M50 5C30 55 12 75 12 92a38 38 0 0 0 76 0C88 75 70 55 50 5Z" fill="var(--amarillo)"/></svg>
+        <svg viewBox="0 0 100 130"><path d="M50 5C30 55 12 75 12 92a38 38 0 0 0 76 0C88 75 70 55 50 5Z" fill="var(--rojo)"/></svg>
+        <svg viewBox="0 0 100 130"><path d="M50 5C30 55 12 75 12 92a38 38 0 0 0 76 0C88 75 70 55 50 5Z" fill="var(--verde)"/></svg>
+      </div>
+      <h1>¡Gracias por tu solicitud!</h1>
+      <p>Hemos recibido tu mensaje y tus fotos correctamente.</p>
+      <p class="small">Te responderemos con tu presupuesto en un plazo de 24-48 h. Revisa también tu carpeta de spam por si acaso.</p>
+      <a class="btn btn-primary" href="index.html">Volver al inicio</a>
+    </div>
+  </main>
+</body>
+</html>
