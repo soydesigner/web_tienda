@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pindeco — Aplicación de pinturas y revestimientos en Asturias</title>
+    
+    <!-- Google Fonts Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Link to Separate Style Sheet File -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- TOP BRAND STRIPE -->
+    <div class="top-stripe"></div>
+
+    <!-- STICKY HEADER -->
+    <header>
+        <div class="container">
+            <div class="header-wrap">
+                <div class="logo-box">
+                    <a href="#" class="logo" aria-label="Pindeco Inicio">
+                        <div class="logo-dot"></div>
+                        <span class="logo-text">PINDECO</span>
+                    </a>
+                </div>
+                <div class="nav-box">
+                    <nav aria-label="Navegación principal">
+                        <ul>
+                            <li><a href="#servicios">Servicios</a></li>
+                            <li><a href="#antes-despues">Antes/Después</a></li>
+                            <li><a href="#como-trabajamos">Cómo trabajamos</a></li>
+                            <li><a href="#el-taller">El taller</a></li>
+                            <li><a href="#contacto">Contacto</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="cta-box">
+                    <a href="#contacto" class="btn btn-primary" style="padding: 0.6rem 1.2rem; font-size: 0.9rem;">Pide presupuesto</a>
+                </div>
+                <button class="menu-toggle" aria-label="Abrir menú de navegación" onclick="alert('Funcionalidad de menú móvil activada. Desplace para navegar.')">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-layout">
+                <div class="hero-text-col">
+                    <h1>Ponemos color y vida a tu hogar</h1>
+                    <p>Especialistas artesanos en el lacado y restauración técnica de mobiliario, así como en la instalación impecable de papel pintado de alta gama en toda Asturias.</p>
+                    <div class="hero-buttons">
+                        <a href="#contacto" class="btn btn-primary">Cuéntanos tu proyecto</a>
+                        <a href="#servicios" class="btn btn-secondary">Nuestros servicios</a>
+                    </div>
+                </div>
+                <div class="hero-vis-col">
+                    <div class="svg-container">
+                        <svg viewBox="0 0 500 350" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M50,160 Q20,60 150,50 T380,80 T460,200 T300,320 T80,280 Z" fill="#FFCB19" opacity="0.15" />
+                            <path d="M120,240 Q90,180 200,160 T400,220" fill="none" stroke="#EBE8E2" stroke-width="8" stroke-linecap="round"/>
+                            
+                            <path class="drop-float-1" d="M140,80 C140,70 150,60 150,70 C150,80 140,90 140,80 Z" fill="#F4332A" />
+                            <path class="drop-float-2" d="M380,60 C380,50 390,40 390,50 C390,60 380,70 380,60 Z" fill="#52C03B" />
+                            <path class="drop-float-3" d="M260,40 C260,30 270,20 270,30 C270,40 260,50 260,40 Z" fill="#FFCB19" />
+
+                            <g class="anim-van">
+                                <path d="M110,230 L110,140 Q110,120 130,120 L320,120 L370,160 L410,170 Q430,175 430,200 L430,230 Z" fill="#52C03B" />
+                                <path d="M110,180 L430,180 L430,205 L110,205 Z" fill="#3b8c2a" opacity="0.4"/>
+                                <path d="M325,132 L360,132 L390,165 L325,165 Z" fill="#FFFFFF" opacity="0.7" />
+                                <rect x="160" y="105" width="140" height="15" rx="4" fill="#A8A297" />
+                                <line x1="185" y1="105" x2="185" y2="120" stroke="#221F1C" stroke-width="3" />
+                                <line x1="215" y1="105" x2="215" y2="120" stroke="#221F1C" stroke-width="3" />
+                                <line x1="245" y1="105" x2="245" y2="120" stroke="#221F1C" stroke-width="3" />
+                                <line x1="275" y1="105" x2="275" y2="120" stroke="#221F1C" stroke-width="3" />
+                                
+                                <text x="140" y="162" font-family="'Fredoka', sans-serif" font-weight="700" font-size="24" fill="#FFCB19">PINDECO</text>
+                                <text x="140" y="176" font-family="'Hanken Grotesk', sans-serif" font-weight="600" font-size="10" fill="#FFFFFF" letter-spacing="1">TALLER ARTE</text>
+
+                                <circle class="wheel" cx="170" cy="235" r="28" fill="#221F1C" stroke="#FFFFFF" stroke-width="4" />
+                                <circle class="wheel" cx="170" cy="235" r="10" fill="#A8A297" />
+                                
+                                <circle class="wheel" cx="350" cy="235" r="28" fill="#221F1C" stroke="#FFFFFF" stroke-width="4" />
+                                <circle class="wheel" cx="350" cy="235" r="10" fill="#A8A297" />
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST BAR -->
+    <div class="container reveal">
+        <div class="trust-bar">
+            <div class="trust-layout">
+                <div class="trust-item">
+                    <div class="trust-num" style="color: var(--yellow);">15+</div>
+                    <div class="trust-label">Años de Maestría</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-num" style="color: var(--red);">100%</div>
+                    <div class="trust-label">Eco-Certificados</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-num" style="color: var(--green);">10 d</div>
+                    <div class="trust-label">Plazo Medio Entrega</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-num" style="color: var(--dark);">4.9/5</div>
+                    <div class="trust-label">Valoración Google</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SERVICES SECTION -->
+    <section id="servicios" class="sec-block reveal">
+        <div class="container">
+            <div class="sec-head">
+                <h2>Servicios Artesanales de Alta Calidad</h2>
+                <p>Cuidamos cada detalle aplicando técnicas avanzadas de tratamiento artesanal para lograr acabados duraderos y de gran valor estético.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card-cell">
+                    <div class="service-card card-lacado">
+                        <div class="paint-drop-icon icon-yellow">
+                            <svg viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+                        </div>
+                        <h3>Lacado Premium</h3>
+                        <p>Aplicación técnica en cabina industrial con sistemas de filtrado avanzados. Acabados lisos, sedosos y satinados perfectos para cocinas y armarios.</p>
+                        <ul class="service-list">
+                            <li>Lacado satinado o mate continuo</li>
+                            <li>Tratamiento anti-amarilleo UV</li>
+                            <li>Puertas, frentes y estructuras fijas</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-card-cell">
+                    <div class="service-card card-restauracion">
+                        <div class="paint-drop-icon icon-red">
+                            <svg viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+                        </div>
+                        <h3>Restauración Técnica</h3>
+                        <p>Devolvemos el esplendor original a sus piezas familiares de madera noble. Tratamiento estructural y acabados protectores clásicos o modernos.</p>
+                        <ul class="service-list">
+                            <li>Eliminación de barnices degradados</li>
+                            <li>Tratamiento curativo de xilófagos</li>
+                            <li>Acabado al aceite, cera o goma laca</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-card-cell">
+                    <div class="service-card card-papel">
+                        <div class="paint-drop-icon icon-green">
+                            <svg viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+                        </div>
+                        <h3>Papel Pintado e Instalación</h3>
+                        <p>Instalación milimétrica de revestimientos murales de autor. Empapelado limpio y preciso con casación perfecta garantizada de motivos complejos.</p>
+                        <ul class="service-list">
+                            <li>Papeles vinílicos y textiles complejos</li>
+                            <li>Preparación y saneado previo de la pared</li>
+                            <li>Murales a medida y fotomurales</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BEFORE / AFTER GALLERY CAROUSEL SECTION -->
+    <section id="antes-despues" class="sec-block reveal" style="background-color: #EBE8E2; border-radius: var(--radius-lg); margin: 2rem 0;">
+        <div class="container">
+            <div class="sec-head">
+                <h2>Transformaciones Reales (Antes / Después)</h2>
+                <p>Arrastra la barra central de cada proyecto para descubrir el cambio radical logrado en nuestro taller de lacado y restauración.</p>
+            </div>
+
+            <div class="carousel-outer">
+                <button class="car-nav" id="carPrev" aria-label="Trabajo anterior">&#10094;</button>
+                <button class="car-nav" id="carNext" aria-label="Siguiente trabajo">&#10095;</button>
+                
+                <div class="carousel-viewport">
+                    <div class="carousel-track" id="carouselTrack">
+                        <!-- Content will be injected dynamically via images.json -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW WE WORK -->
+    <section id="como-trabajamos" class="bg-dark-section reveal">
+        <div class="container">
+            <div class="sec-head">
+                <h2>Nuestro Proceso Impecable</h2>
+                <p>La excelencia no es casualidad; seguimos un método artesanal riguroso para garantizar resultados insuperables.</p>
+            </div>
+            
+            <div class="steps-layout">
+                <div class="step-cell step-1">
+                    <div class="step-drop"><span>1</span></div>
+                    <h3>Asesoría Inicial</h3>
+                    <p>Estudiamos el estado de la madera o las paredes y seleccionamos el color o motivo idóneo.</p>
+                </div>
+                <div class="step-cell step-2">
+                    <div class="step-drop"><span>2</span></div>
+                    <h3>Presupuesto Fijo</h3>
+                    <p>Presentamos una valoración transparente con plazos cerrados y materiales detallados.</p>
+                </div>
+                <div class="step-cell step-3">
+                    <div class="step-drop"><span>3</span></div>
+                    <h3>Trabajo Técnico</h3>
+                    <p>Procedemos al saneado, lijado de precisión y lacado o colocación limpia en nuestro taller.</p>
+                </div>
+                <div class="step-cell step-4">
+                    <div class="step-drop"><span>4</span></div>
+                    <h3>Entrega Protegida</h3>
+                    <p>Transportamos y montamos la pieza final perfectamente envuelta lista para lucir en su estancia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE WORKSHOP (EL TALLER) -->
+    <section id="el-taller" class="sec-block reveal">
+        <div class="container">
+            <div class="workshop-layout">
+                <div class="workshop-text-cell">
+                    <h2>Instalaciones Técnicas y Oficio Tradicional</h2>
+                    <p>Disponemos de un taller optimizado en Asturias con cabina de presurización e hilera de paneles filtrantes secos para evitar motas de polvo y garantizar un brillo de espejo satinado uniforme único.</p>
+                    <p>Nuestros valores fundamentales guían cada proyecto que entra por nuestras puertas:</p>
+                    <ul class="values-list">
+                        <li>Pasión por el acabado y el detalle minucioso</li>
+                        <li>Sostenibilidad usando barnices al agua con bajo VOC</li>
+                        <li>Respeto por la pátina histórica de las antigüedades</li>
+                    </ul>
+                </div>
+                <div class="workshop-img-cell">
+                    <div class="workshop-img-wrapper">
+                        <img id="workshopImg" src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1000&q=80" alt="Cabina de pintura industrial Pindeco en Asturias">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="sec-block reveal" style="background-color: var(--white); border-radius: var(--radius-lg);">
+        <div class="container">
+            <div class="sec-head">
+                <h2>Clientes Satisfechos en Asturias</h2>
+                <p>Opiniones reales de particulares y estudios de interiorismo que confían en nuestras manos.</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-cell">
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="review-text">"Lacaron las puertas de mi cocina antigua en color crema satinado y parece completamente nueva. Un trabajo de profesionales limpios y puntuales."</p>
+                        <div class="review-author">María Luisa Fernández</div>
+                        <div class="review-loc">Gijón, Asturias</div>
+                    </div>
+                </div>
+                <div class="testimonial-cell">
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="review-text">"Restauraron un aparador heredado de mi abuela que tenía carcoma. El acabado al aceite recuperó la veta de castaño de una forma espectacular."</p>
+                        <div class="review-author">Carlos J. Suárez</div>
+                        <div class="review-loc">Oviedo, Asturias</div>
+                    </div>
+                </div>
+                <div class="testimonial-cell">
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="review-text">"Excelente colocación de un papel pintado con patrón geométrico muy difícil. Las uniones son invisibles, unos auténticos maestros de la brocha."</p>
+                        <div class="review-author">Estudio Interiorismo Ardis</div>
+                        <div class="review-loc">Avilés, Asturias</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT FORM -->
+    <section id="contacto" class="sec-block reveal">
+        <div class="container">
+            <div class="sec-head">
+                <h2>¿Tienes una idea en mente? Pide Presupuesto Gratis</h2>
+                <p>Envíanos los detalles o sube fotos de tus muebles para recibir una estimación económica personalizada sin compromiso.</p>
+            </div>
+            
+            <div class="contact-layout">
+                <div class="contact-form-cell">
+                    <form action="https://formsubmit.co/tu-correo-aqui@pindeco.es" method="POST" enctype="multipart/form-data">
+                        <input type="hidden" name="_next" value="https://pindeco-asturias.vercel.app">
+                        <input type="hidden" name="_subject" value="Nueva solicitud de presupuesto - Pindeco">
+                        
+                        <div class="form-group">
+                            <label for="formName">Nombre completo *</label>
+                            <input type="text" id="formName" name="Nombre" class="form-control" required placeholder="Ej: Juan Pérez">
+                        </div>
+                        <div class="form-group">
+                            <label for="formPhone">Teléfono de contacto *</label>
+                            <input type="tel" id="formPhone" name="Telefono" class="form-control" required placeholder="Ej: 600 000 000">
+                        </div>
+                        <div class="form-group">
+                            <label for="formEmail">Correo electrónico *</label>
+                            <input type="email" id="formEmail" name="Email" class="form-control" required placeholder="Ej: tu@correo.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="formService">Servicio requerido</label>
+                            <select id="formService" name="Servicio Principal" class="form-control">
+                                <option value="Lacado de muebles">Lacado Premium de Mobiliario</option>
+                                <option value="Restauracion artesanal">Restauración Técnica de Madera</option>
+                                <option value="Papel Pintado">Colocación de Revestimientos / Papel Pintado</option>
+                                <option value="Varios / Complejo">Múltiples servicios combinados</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="formMsg">Cuéntanos sobre los muebles o espacio *</label>
+                            <textarea id="formMsg" name="Mensaje" class="form-control" rows="5" required placeholder="Medidas aproximadas, estado actual, acabado deseado..."></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Sube fotos del estado actual de las piezas (Opcional)</label>
+                            <div class="file-drop-zone" id="dropZone">
+                                <div class="file-drop-icon">📸</div>
+                                <p>Arrastra tus imágenes aquí o haz clic para explorar en tu equipo</p>
+                                <input type="file" id="fileInput" name="Fotos Adjuntas" multiple accept="image/*,application/pdf" style="display: none;">
+                                <div class="file-thumbnails" id="thumbPreviewArea"></div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem; margin-top: 1rem;">Enviar Solicitud de Presupuesto Seguro</button>
+                    </form>
+                </div>
+                
+                <div class="contact-info-cell">
+                    <div class="info-block">
+                        <h4>📍 Nuestro Taller Principal</h4>
+                        <p>Polígono Industrial Espíritu Santo, Calle Llanera, Parcela 14<br>33010 Oviedo, Asturias</p>
+                    </div>
+                    <div class="info-block">
+                        <h4>📞 Teléfono Directo</h4>
+                        <p><a href="tel:+34985000000" style="color: var(--dark); font-weight: 600; text-decoration: none;">+34 985 000 000</a></p>
+                    </div>
+                    <div class="info-block">
+                        <h4>✉️ Correo Electrónico</h4>
+                        <p><a href="mailto:info@pindeco.es" style="color: var(--dark); font-weight: 600; text-decoration: none;">info@pindeco.es</a></p>
+                    </div>
+                    <div class="info-block">
+                        <h4>🕒 Horario de Atención</h4>
+                        <p>Lunes a Viernes: 08:00 – 14:00 y 15:30 – 19:00<br>Sábados: Solo con cita previa confirmada.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer>
+        <div class="container">
+            <div class="footer-layout">
+                <div class="footer-col footer-col-logo">
+                    <a href="#" class="logo">
+                        <div class="logo-dot" style="background-color: var(--yellow);"></div>
+                        <span class="logo-text">PINDECO</span>
+                    </a>
+                    <p class="footer-p">Maestría artesanal en acabados de alta decoración. Devolvemos el alma a tus espacios y enseres preferidos.</p>
+                </div>
+                <div class="footer-col footer-col-links">
+                    <h3 style="font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; color: var(--yellow);">Mapa Web</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#antes-despues">Antes/Después</a></li>
+                        <li><a href="#como-trabajamos">Cómo trabajamos</a></li>
+                        <li><a href="#el-taller">El taller</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-col-social">
+                    <h3 style="font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; color: var(--yellow);">Síguenos</h3>
+                    <p class="footer-p" style="margin-top:0; margin-bottom: 1rem;">Sigue de cerca el proceso diario de restauración en nuestras redes:</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-btn" aria-label="Instagram de Pindeco">IG</a>
+                        <a href="#" class="social-btn" aria-label="Facebook de Pindeco">FB</a>
+                        <a href="#" class="social-btn" aria-label="Pinterest de Pindeco">PT</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Pindeco Aplicación de Pinturas y Revestimientos S.L. Todos los derechos reservados. Fabricado de forma artesanal en Asturias.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Link to Linked Separate JavaScript Code -->
+    <script src="js/main.js"></script>
+</body>
+</html>
