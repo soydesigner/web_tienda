@@ -9,7 +9,7 @@
   "gallery-2": { "src": "img/galeria-2.jpg", "alt": "Salón con papel pintado botánico" },
   "gallery-3": { "src": "img/galeria-3.jpg", "alt": "Frente de cocina lacado" },
 
-  "taller":    { "src": "img/taller.png",    "alt": "Taller de Pindeco" },
+  "taller":    { "src": "img/taller.jpg",    "alt": "Taller de Pindeco" },
 
   "galleryRotation": {
     "gallery-1": ["img/galeria-1.jpg", "img/despues.jpg"],
