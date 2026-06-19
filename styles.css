@@ -25,7 +25,7 @@
   }
   h1,h2,h3,.fred{font-family:"Fredoka",system-ui,sans-serif;font-weight:600;line-height:1.05;color:var(--ink);letter-spacing:-.01em}
   a{color:inherit;text-decoration:none}
-  img{max-width:100%;display:block}
+  img{max-width:200%;display:block}
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
   .eyebrow{font-family:"Fredoka";font-weight:600;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:inline-flex;align-items:center;gap:.55em}
   .eyebrow .dot{width:9px;height:12px;display:inline-block}
@@ -76,7 +76,7 @@
   .hero-blob{position:absolute;inset:5% 1%;z-index:0;background:var(--amarillo);border-radius:46% 54% 56% 44% / 57% 46% 54% 43%}
  .hero-art{position:relative;}
 
-.hero-truck{position:relative;z-index:2;width:100%;height:auto;display:block;filter:drop-shadow(0 16px 20px rgba(14,22,46,.25))}
+.hero-truck{position:relative;z-index:2;width:200%;height:auto;display:block;filter:drop-shadow(0 16px 20px rgba(14,22,46,.25))}
 
   .hero-art .fdrop{position:absolute;z-index:3;height:auto}
   .hero-art .hd1{top:4%;left:5%;width:30px}
