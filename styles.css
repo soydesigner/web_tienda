@@ -74,7 +74,17 @@
   /* Composición visual del hero (placeholder de fotos) */
   .hero-art{position:relative;display:flex;align-items:center;justify-content:center;padding:14px 4px}
   .hero-blob{position:absolute;inset:5% 1%;z-index:0;background:var(--amarillo);border-radius:46% 54% 56% 44% / 57% 46% 54% 43%}
-  .hero-truck{position:relative;z-index:2;width:160%;height:auto;display:block;filter:drop-shadow(0 16px 20px rgba(14,22,46,.25))}
+ .hero-art{position:relative;}
+
+.hero-truck{
+  position:absolute !important;
+  left:50% !important;
+  top:50% !important;
+  transform:translate(-50%,-50%) !important;
+  width:130% !important;
+  height:auto !important;
+  z-index:3;
+}
 
   .hero-art .fdrop{position:absolute;z-index:3;height:auto}
   .hero-art .hd1{top:4%;left:5%;width:30px}
