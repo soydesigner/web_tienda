@@ -1,8 +1,10 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
 :root{
     --ink:#16284D;
     --text:#1E2740;
     --muted:#6B7187;
-    --canvas:#F4F2EC;
+    --canvas:#28344e;
     --paper:#FBFAF8;
     --line:#E2DCD0;
     --amarillo:#E6B43A;
@@ -23,7 +25,18 @@
     line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased;
     overflow-x:hidden;
   }
-  h1,h2,h3,.fred{font-family:"Fredoka",system-ui,sans-serif;font-weight:600;line-height:1.05;color:var(--ink);letter-spacing:-.01em}
+ /* Titulares en script dorado (estilo logo) */
+h1,h2{
+  font-family:"Fredoka";
+  font-weight:400;
+  line-height:1.0;
+  letter-spacing:.01em;
+  background:linear-gradient(176deg,#fff6dd 4%,#f0e2b6 26%,#c9a85f 52%,#9c7c41 74%,#f0e2b6 100%);
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;color:transparent;
+}
+/* Subtítulos pequeños: se mantienen legibles en la sans */
+h3,.fred{font-family:"Fredoka",system-ui,sans-serif;font-weight:600;line-height:1.05;color:var(--ink);letter-spacing:-.01em}
   a{color:inherit;text-decoration:none}
   img{max-width:200%;display:block}
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
@@ -44,7 +57,7 @@
   header::before{content:"";display:block;height:4px;background:linear-gradient(90deg,var(--amarillo) 0%,var(--amarillo) 33%,var(--rojo) 33%,var(--rojo) 66%,var(--verde) 66%,var(--verde) 100%)}
   header.scrolled{border-color:var(--line)}
   .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;height:112px}
-  .brand img{height:88px;width:auto}
+  .brand img{height:160px;width:auto;margin-top:50px}
   .nav-links{display:flex;align-items:center;gap:30px;list-style:none}
   .nav-links a{font-weight:500;font-size:.98rem;color:var(--text);position:relative;padding:4px 0}
   .nav-links a::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:2px;background:var(--ink);transition:width .22s ease}
@@ -76,7 +89,7 @@
   .hero-blob{position:absolute;inset:5% 1%;z-index:0;background:var(--amarillo);border-radius:46% 54% 56% 44% / 57% 46% 54% 43%}
  .hero-art{position:relative;}
 
-.hero-truck{position:relative;z-index:2;width:200%;height:auto;display:block;filter:drop-shadow(0 16px 20px rgba(14,22,46,.25))}
+.hero-truck{position:relative;z-index:2;width:150%;height:auto;display:block;filter:drop-shadow(0 16px 20px rgba(14,22,46,.25))}
 
   .hero-art .fdrop{position:absolute;z-index:3;height:auto}
   .hero-art .hd1{top:4%;left:5%;width:30px}
@@ -110,7 +123,7 @@
   /* ---------- Sección genérica ---------- */
   section.block{padding:86px 0}
   .sec-head{max-width:620px;margin-bottom:46px}
-  .sec-head h2{font-size:clamp(2rem,4vw,2.9rem);margin-top:12px}
+  .sec-head h2{font-size:clamp(2rem,4vw,2.9rem);margin-top:12px;font-family:"Fredoka",cursive;font-size:clamp(2rem,4vw,2.8rem);font-weight:600;line-height:1.05;color:var(--ink)}
   .sec-head p{color:var(--muted);margin-top:14px;font-size:1.08rem}
 
   /* ---------- Servicios ---------- */
@@ -251,11 +264,33 @@
 
   /* ---------- Movimiento ---------- */
   @keyframes floaty{0%{transform:translateY(0)}50%{transform:translateY(-9px)}100%{transform:translateY(0)}}
-  @keyframes bob{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-9px) rotate(-.6deg)}}
+  
+ @keyframes bob {
+  0%, 100% {
+    transform: perspective(800px) translateZ(0px) scale(1);
+  }
+  50% {
+    transform: perspective(800px) translateZ(40px) scale(1.05);
+  }
+}
+@keyframes entradaFurgo {
+  0% {
+    transform: translateX(120%) scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
   @keyframes spin{to{transform:rotate(360deg)}}
   @keyframes blobpulse{0%,100%{transform:scale(1) rotate(0deg)}50%{transform:scale(1.04) rotate(2.5deg)}}
   .js .hero-blob{transform-box:fill-box;transform-origin:center;animation:blobpulse 13s ease-in-out infinite}
-  .js .hero-truck{animation:bob 5s ease-in-out infinite}
+  .js .hero-truck{
+  animation: 
+    entradaFurgo 2s ease-out forwards,
+    bob 5s ease-in-out infinite 2s;
+}
   .js .hero-art .fdrop{transform-box:fill-box;transform-origin:center}
   .js .hero-art .hd1{animation:floaty 5s ease-in-out infinite}
   .js .hero-art .hd2{animation:floaty 6.4s ease-in-out infinite}
@@ -294,3 +329,38 @@
     *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
     .js .reveal{opacity:1;transform:none}
   }
+/* ===== Tema cobalto: que las letras queden bien ===== */
+
+/* Brillo sutil en el hero para dar profundidad al azul */
+.hero{background:radial-gradient(120% 80% at 50% -15%, rgba(255,255,255,.10), transparent 60%)}
+
+/* Texto del HERO sobre cobalto */
+.hero .eyebrow{color:#dfe8ff}
+.hero p.lead{color:#cdd9f5}
+.hero .hero-note{color:#b9c8ee}
+.hero .hero-note b{color:#fff}
+
+/* SERVICIOS (las tarjetas siguen siendo blancas) */
+#servicios .eyebrow{color:#dfe8ff}
+#servicios .sec-head p{color:#cdd9f5}
+
+/* TALLER sobre cobalto */
+#taller .eyebrow{color:#dfe8ff}
+#taller p{color:#cdd9f5 !important}   /* el !important vence al color en línea del intro */
+#taller .value h4{color:#fff}
+
+/* Iconos de contacto: chip cobalto con icono blanco */
+.info-list .ii svg{stroke:#fff}
+
+/* Títulos sobre fondo CLARO: el dorado no se lee bien, los pasamos a azul marino */
+#trabajos .sec-head h2,
+#opiniones .sec-head h2,
+#contacto .cont-info h2{
+  background:none;
+  -webkit-text-fill-color:var(--ink);
+  color:var(--ink);
+}.hero-art::before{
+  content:"";position:absolute;inset:25%;z-index:0;
+  background:radial-gradient(60% 55% at 55% 50%, rgba(230,180,58,.22), transparent 70%);
+  filter:blur(10px);
+}
